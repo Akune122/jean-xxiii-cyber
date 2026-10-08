@@ -2,7 +2,7 @@
 
 Application web interactive développée dans le cadre du **Mois de la Cybersécurité (12-16 octobre)**.
 
-Elle est destinée aux **élèves utilisant les iPads du 3C**, ainsi qu'aux **lycéens, étudiants et professeurs** de l'établissement.
+Elle est destinée aux **élèves utilisant les iPads**, ainsi qu'aux **lycéens, étudiants et professeurs** de l'établissement.
 
 ---
 
