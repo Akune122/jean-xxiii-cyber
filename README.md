@@ -48,7 +48,7 @@ Elle est destinée aux **élèves utilisant les iPads**, ainsi qu'aux **lycéens
 ### 1. Cloner le projet
 
 ```bash
-git clone https://github.com/ton-pseudo/jean-xxiii-cyber.git
+git clone https://github.com/Akune122/jean-xxiii-cyber.git
 cd jean-xxiii-cyber
 ```
 
