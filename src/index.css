@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+body {
+  background-color: #020604; /* Un noir très légèrement teinté de vert émeraude */
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Lueur radiale centrale pour casser le vide */
+.cyber-glow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(16,185,129,0.06) 0%, rgba(0,0,0,0) 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Grille holographique animée */
+.cyber-grid {
+  position: fixed;
+  inset: -100px; /* Déborde pour cacher les bords de l'animation */
+  background-image:
+    linear-gradient(rgba(16, 185, 129, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 185, 129, 0.08) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 2;
+  pointer-events: none;
+  animation: moveGrid 10s linear infinite;
+}
+
+@keyframes moveGrid {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(50px); }
+}
+
+/* Ligne de balayage (Radar/Scanner) */
+.scanner-line {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #10b981;
+  box-shadow: 0 0 15px #10b981, 0 0 30px #10b981;
+  opacity: 0.3;
+  z-index: 50;
+  pointer-events: none;
+  animation: scan 8s linear infinite;
+}
+
+@keyframes scan {
+  0% { top: -10%; opacity: 0; }
+  10% { opacity: 0.4; }
+  90% { opacity: 0.4; }
+  100% { top: 110%; opacity: 0; }
+}
+
+/* Effet vieux moniteur */
+.scanlines {
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 50%);
+  background-size: 100% 4px;
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 51;
+}
+
+/* Lueur Néon des bordures */
+.neon-border {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.15), inset 0 0 20px rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.5);
+}
+.neon-text {
+  text-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+}
+
+/* Curseur clignotant */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-blink { animation: blink 1s step-end infinite; }
